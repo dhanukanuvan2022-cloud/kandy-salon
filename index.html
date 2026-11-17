@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kandy Salon (Pvt) Ltd | Let's Talk About Hair – Peradeniya Road, Kandy</title>
+<meta name="description" content="Kandy Salon on Peradeniya Road – keratin, hair colour, braids, facials and more. Book your appointment on WhatsApp.">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a href="#top" class="brand"><img src="img/logo.jpg" alt="Kandy Salon logo"><span>Kandy Salon</span></a>
+  <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('open')">☰</button>
+  <nav>
+    <a href="#services">Prices</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#location">Find Us</a>
+    <a href="#book" class="btn sm">Book Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <p class="eyebrow">Peradeniya Road · Kandy</p>
+    <h1>Let's talk<br>about <em>hair.</em></h1>
+    <p class="lead">Keratin, colour, braids and facials by our expert stylists. Pick a date, pick a time, and confirm on WhatsApp in seconds.</p>
+    <div class="cta"><a href="#book" class="btn">Book on WhatsApp</a><a href="#gallery" class="btn ghost">See our work</a></div>
+  </div>
+</section>
+
+<section id="services" class="wrap">
+  <h2>Our Prices <small>Christmas Offers</small></h2>
+  <div class="cards">
+    <article class="card pink"><h3>Keratin</h3><ul>
+      <li><span>Short hair</span><b>LKR 15,000</b></li>
+      <li><span>Mid length</span><b>LKR 30,000</b></li>
+      <li><span>Any length</span><b>LKR 40,000</b></li></ul></article>
+    <article class="card gold"><h3>Colour</h3><ul>
+      <li><span>Grey coverage</span><b>LKR 6,000</b></li>
+      <li><span>Global colour</span><b>LKR 15,000</b></li>
+      <li><span>Touch up</span><b>LKR 10,000</b></li>
+      <li><span>Highlights, ombre, balayage, sombre etc.</span><b>LKR 20,000</b></li></ul></article>
+    <article class="card teal"><h3>Facial</h3><ul>
+      <li><span>Clean up</span><b>LKR 2,000</b></li>
+      <li><span>Classic facial</span><b>LKR 3,000</b></li>
+      <li><span>Anti acne, Gold, Glow etc.</span><b>LKR 6,000</b></li></ul></article>
+  </div>
+  <p class="note">Also available: haircuts, styling, braids &amp; more – call or WhatsApp us for prices.</p>
+</section>
+
+<section id="gallery" class="wrap">
+  <h2>Our Work</h2>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap narrow">
+    <h2>Book an Appointment</h2>
+    <p class="center">Fill in the details and we'll open WhatsApp with your request ready to send.</p>
+    <form id="bookForm" novalidate>
+      <label>Your name<input id="name" required placeholder="e.g. Nimali Perera"></label>
+      <label>Service
+        <select id="service" required>
+          <option value="">Choose a service…</option>
+          <option>Keratin</option><option>Hair Colour</option><option>Highlights / Ombre / Balayage</option>
+          <option>Haircut &amp; Styling</option><option>Braids</option><option>Facial</option><option>Other</option>
+        </select></label>
+      <div class="row">
+        <label>Date<input type="date" id="date" required></label>
+        <label>Time<select id="time" required></select></label>
+      </div>
+      <label>Notes (optional)<textarea id="notes" rows="3" placeholder="Hair length, colour you want, etc."></textarea></label>
+      <p class="err" id="err"></p>
+      <button class="btn wa" type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section id="reviews" class="wrap">
+  <h2>What Customers Say</h2>
+  <div class="cards" id="revBox"></div>
+  <p class="center"><a class="btn ghost dark" id="allRev" target="_blank" rel="noopener">Read all reviews on Google Maps</a></p>
+</section>
+
+<section id="location" class="wrap">
+  <h2>Find Us</h2>
+  <div class="loc">
+    <div class="info">
+      <h3>Kandy Salon (Pvt) Ltd</h3>
+      <p>📍 No. 253, Peradeniya Road, Kandy</p>
+      <p>📞 <span id="phones"></span></p>
+      <p>✉️ <a href="mailto:infokandysalon@gmail.com">infokandysalon@gmail.com</a></p>
+      <p>🕘 <span id="hours"></span></p>
+      <div class="cta"><a class="btn" id="dir" target="_blank" rel="noopener">Get Directions</a>
+      <a class="btn ghost dark" id="fb" target="_blank" rel="noopener">Facebook Page</a></div>
+    </div>
+    <iframe title="Kandy Salon map" loading="lazy" id="map" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <img class="shopimg" src="img/shop-night.jpg" alt="Kandy Salon shopfront on Peradeniya Road" loading="lazy">
+</section>
+
+<footer>
+  <img src="img/logo.jpg" alt="">
+  <p>© <span id="yr"></span> Kandy Salon (Pvt) Ltd · Let's talk about hair.</p>
+  <p><a id="fb2" target="_blank" rel="noopener">Facebook</a> · <a id="map2" target="_blank" rel="noopener">Google Maps</a> · <a href="mailto:infokandysalon@gmail.com">Email</a></p>
+</footer>
+
+<a class="float" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<div class="lb" id="lb" onclick="this.classList.remove('on')"><img alt=""></div>
+<script src="script.js"></script>
+</body>
+</html>
